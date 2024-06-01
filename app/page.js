@@ -95,7 +95,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="border-2 text-base cursor-pointer bg-gray-900 text-white ml-5 w-23 p-2 border-black text-xl text-center my-8 rounded-md">
-                <a href="#" download>
+                <a href="#" >
                   Contact
                 </a>
               </div>
