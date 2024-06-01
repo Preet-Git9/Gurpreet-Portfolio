@@ -3,8 +3,8 @@ import UserQuery from "@/models/UserQuery";
 import { NextResponse } from "next/server";
 
 export const POST = async (req) => {
+  await connectDb();
   try {
-    await connectDb();
     const body = await req.json();
     const { name, email, subject, message } = body;
     let user = new UserQuery({ name, email, subject, message });

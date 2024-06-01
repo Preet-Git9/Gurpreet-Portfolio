@@ -13,7 +13,7 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const data = {name, email, subject, message};
-    const res = await fetch("http://localhost:3000/api/userQuery",{
+    const res = await fetch("https://gurpreet-singh-three.vercel.app/api/userQuery",{
     headers: {
       'Content-Type': 'application/json'
     },
@@ -21,6 +21,7 @@ export default function Home() {
     body: JSON.stringify(data)
     })
     const response = await res.json()
+    console.log(response)
     if(response.success){
       setName("");
       setEmail("");
@@ -253,7 +254,7 @@ export default function Home() {
         </h3>
         <div className={`${styles.skills}`}>
           <div
-            className={`${styles.skillBox} border-1 border-black p-5 bg-white w-48 rounded-lg`}
+            className={`${styles.skillBox} border-1 border-black p-5 bg-white w-36 rounded-lg`}
           >
             <img src="html.webp" alt="" />
             <h3 className="text-center text-2xl pt-2 text-black">HTML</h3>

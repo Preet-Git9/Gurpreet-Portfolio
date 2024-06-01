@@ -3,8 +3,8 @@ import UserQuery from "@/models/UserQuery";
 import { NextResponse } from "next/server";
 
 export const GET = async (req) => {
+    await connectDb();
     try {
-        await connectDb();
         const user  = await UserQuery.find()
         return NextResponse.json({data: user});
         
