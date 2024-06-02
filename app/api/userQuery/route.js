@@ -2,6 +2,8 @@ import connectDb from "@/middleware/mongoose";
 import UserQuery from "@/models/UserQuery";
 import { NextResponse } from "next/server";
 
+
+
 export const POST = async (req) => {
   await connectDb();
   try {
