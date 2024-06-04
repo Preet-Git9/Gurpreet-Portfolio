@@ -5,6 +5,11 @@ import { NextResponse } from "next/server";
 
 
 export const POST = async (req) => {
+  // NextResponse.setHeader('Access-Control-Allow-Origin', '*');
+
+  // NextResponse.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+
+  // NextResponse.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   await connectDb();
   try {
     const body = await req.json();

@@ -11,6 +11,21 @@
     transition: all 0.2s ease;
 }
 
+.description {
+    display: flex;
+    
+
+}
+.descriptionStyle {
+    width: 5px;
+    height: 250px;
+    margin-right: 4px;
+    background-color: rgb(14, 4, 14);
+}
+.descriptionText {
+
+}
+
 @media only screen and (max-width: 1000px) {
     .titleSection {
         display: flex;

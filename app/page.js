@@ -1,7 +1,7 @@
 "use client";
 import Typewriter from "typewriter-effect";
 import styles from "../style/page.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -10,6 +10,7 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [sideEffect, setSideEffect] = useState("")
   const handleSubmit = async (e) => {
     e.preventDefault()
     const data = {name, email, subject, message};
@@ -50,6 +51,9 @@ export default function Home() {
     }
 
   };
+  useEffect(()=>{
+    setSideEffect(true);
+  },[])
   return (
     <>
       <div
@@ -66,7 +70,10 @@ export default function Home() {
       draggable
       pauseOnHover
       />
-        <div className={`${styles.description} py-32 px-48 `}>
+        <div className={`${styles.description} py-32 pr-48 overflow-hidden`}>
+        <span className={`${styles.descriptionStyle} `}>
+        </span>
+        <div className={`${styles.descriptionText} relative  ${sideEffect?"translate-x-0 ":"-translate-x-full"} transition-transform duration-500 ease-linear`}>
           <p className="font-bold text-2xl">Hey... I am</p>
           <h4 className="font-bold text-6xl py-3">Gurpreet Singh</h4>
           <div className="typewriter text-4xl">
@@ -101,6 +108,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
+          </div>
           </div>
         </div>
         <div className={`${styles.image} `}>
