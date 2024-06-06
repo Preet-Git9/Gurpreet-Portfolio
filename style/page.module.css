@@ -22,7 +22,14 @@
     margin-right: 4px;
     background-color: rgb(14, 4, 14);
 }
-.descriptionText {
+.projectCard:hover {
+    transform: scale(1.05);
+    transition: transform 100ms linear;
+
+}
+.skillBox:hover {
+    transform: scale(1.2);
+    transition: transform 100ms linear;
 
 }
 
@@ -68,5 +75,10 @@
     .skillBox img {
         height: 100px;
         align-items: center;
+    }
+  }
+  @media only screen and (max-width: 475px) {
+    .descriptionStyle {
+        height: 310px;
     }
   }

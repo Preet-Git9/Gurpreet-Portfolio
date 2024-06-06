@@ -14,7 +14,7 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const data = {name, email, subject, message};
-    const res = await fetch("https://gurpreet-singh-three.vercel.app/api/userQuery",{
+    const res = await fetch("api/userQuery",{
     headers: {
       'Content-Type': 'application/json'
     },
@@ -71,9 +71,9 @@ export default function Home() {
       pauseOnHover
       />
         <div className={`${styles.description} py-32 pr-48 overflow-hidden`}>
-        <span className={`${styles.descriptionStyle} `}>
-        </span>
-        <div className={`${styles.descriptionText} relative  ${sideEffect?"translate-x-0 ":"-translate-x-full"} transition-transform duration-500 ease-linear`}>
+        <div className={`${styles.descriptionStyle} rounded-3xl`}>
+        </div>
+        <div className={`${styles.descriptionText} relative  ${sideEffect?"translate-x-0 ":"-translate-x-full"} transition-transform duration-500 ease-linear `}>
           <p className="font-bold text-2xl">Hey... I am</p>
           <h4 className="font-bold text-6xl py-3">Gurpreet Singh</h4>
           <div className="typewriter text-4xl">
